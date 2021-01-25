@@ -57,7 +57,7 @@ window.onSpotifyWebPlaybackSDKReady = () => {
         };
 
         //Call the 'play' endpoint
-        fetch("https://api.spotify.com/v1/me/player/play?device_id=116aca340895499734d0fc05be7ff7deaec8957d", requestOptions)
+        fetch(`https://api.spotify.com/v1/me/player/play?device_id=${device_id}`, requestOptions)
             .then(response => response.text())
             .then(result => console.log(result))
             .catch(error => console.log('error', error));
